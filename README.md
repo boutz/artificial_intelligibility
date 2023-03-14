@@ -1,6 +1,8 @@
 # README for Artificial Intelligibility
 
-Installation is not required as the Artificial Intelligibility web application can be accessed at [www.artificialintelligibility.com](https://www.artificialintelligibility.com/)
+******* site no longer hosted *******
+Installation is not required as the Artificial Intelligibility web application can be accessed at [www.artificialintelligibility.com](https://www.artificialintelligibility.com/)  
+******* site no longer hosted *******
 
 # /web_dev
 

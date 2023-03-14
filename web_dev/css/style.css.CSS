@@ -1,0 +1,173 @@
+body {
+  background: blanchedalmond;
+  height: 100%;
+  color: black;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+
+  min-height: 100px;
+}
+
+ul {
+  list-style-type: circle;
+  margin: 0;
+}
+
+#bullets {
+  list-style-type: circle;
+}
+
+li {
+  display: inline-block;
+}
+
+button {
+  color: black;
+  background: blanchedalmond;
+}
+
+h1 {
+  font-family: "Courier New", Courier, monospace;
+  color: whitesmoke;
+  padding-right: 50px;
+  padding-bottom: 20px;
+  background: #588b8b;
+  text-align: right;
+  width: 100%;
+  position: relative;
+}
+
+#new-header {
+  font-family: "Courier New", Courier, monospace;
+  background: #588b8b;
+  color: whitesmoke;
+  position: relative;
+  bottom: 0px;
+  left: 0px;
+  padding-top: 20px;
+  width: 100%;
+  font-size: 175%;
+}
+
+h3 {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  color: whitesmoke;
+  background: #588b8b;
+  padding: 5px;
+  text-align: center;
+}
+
+h4 {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  color: #588b8b;
+  padding: 5px;
+  text-align: center;
+  font-size: 175%;
+}
+
+h5 {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  color: #588b8b;
+  padding: 5px;
+  /* text-align: center; */
+  font-size: 175%;
+}
+
+#centredButton {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+icons {
+  padding: 10px;
+}
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 5rem; /* Footer height */
+}
+
+#footer {
+  background: #588b8b;
+  color: whitesmoke;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 5rem; /* Footer height */
+}
+
+#footer-text {
+  padding-left: 20px;
+  padding-top: 5px;
+  font-size: 100%;
+}
+
+.row {
+  display: flex;
+}
+
+.col {
+  flex: 50%;
+}
+
+#moreSound {
+  background: white;
+}
+
+#soundsArea {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+#audio-area0 {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+#audio-area1 {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+#audio-area2 {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+#sound-audio {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+p {
+  font-size: medium;
+}
+
+#timeout {
+  color: red;
+}
+
+#loaderText {
+  font-size: 200%;
+}
+
+#loaderText1 {
+  font-size: 200%;
+}
+
+#source {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  font-size: 75%;
+  font-style: italic;
+}

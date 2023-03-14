@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<meta charset="utf-8">
+<html>  
+  <head> 
+      <link rel="stylesheet" type="text/css" href="css/semantic.min.css">
+      <script src="js/polyfill.js"></script>
+      <script src="js/jquery-3.1.1.min.js"></script>
+      <script src="js/semantic.min.js"></script>
+      <script src="js/sounds.js"></script>
+      <script src="js/script.js"></script>
+      <link rel="stylesheet" href="css/style.css.CSS">
+      <link rel="stylesheet" href="js/UI-Icon-master">
+      <title id='title'>Artificial Intelligibility</title>
+  </head>
+
+
+<!-- HEADER AND NAVIAGATION MENU  -->
+  <body>
+    <div id="mode"></div>
+    <div id='page-container'>
+      <div id='content-wrap'>
+        <nav id='new-header'> 
+          <ul> 
+            <div class="row">
+              <div class="col">
+                <button id="homeBtn" class="ui inverted button" onclick="showElementHideOthers1('home', ['practise', 'about', 'learn', 'feedback', 'moreSound', 'soundsOfEnglish', 'segmentalErrors', 'prosodicErrors', 'howItWorks', 'vocalTract', 'aboutFeedback', 'moreSound', 'goback', 'soundButtons'])" >Home</button>
+                <button id="learnBtn" class="ui inverted button" onclick="showElementHideOthers1('learn', ['practise', 'about', 'home', 'feedback', 'soundsOfEnglish', 'segmentalErrors', 'prosodicErrors', 'howItWorks', 'vocalTract', 'aboutFeedback', 'moreSound', 'goback', 'soundButtons']); activate()" >Learn</button>
+                <button id="practiseBtn" class="ui inverted button" onclick="showElementHideOthers1('practise', ['learn', 'about', 'home', 'feedback',  'comparisonArea', 'voiceRecordArea', 'moreSound', 'soundsOfEnglish', 'segmentalErrors', 'prosodicErrors', 'howItWorks', 'vocalTract', 'aboutFeedback', 'goback', 'soundButtons']); clearButtons(); activate()">Practise</button>
+                <button id="aboutBtn" class="ui inverted button" onclick="showElementHideOthers1('about', ['learn', 'practise', 'home', 'feedback', 'moreSound', 'soundsOfEnglish', 'segmentalErrors', 'prosodicErrors', 'howItWorks', 'vocalTract', 'aboutFeedback', 'moreSound', 'goback', 'soundButtons'])">About</button> 
+              </div>
+              <div class="col">
+                <h1>Artificial Intelligibility</h1>
+              </div>
+            </div>
+          </ul>
+        </nav>  
+
+<!-- HOME PAGE -->
+
+      <div id='home' style="display:block">  
+        <div class="ui grid padded">
+          <div class="eight wide column">
+            <div class="ui raised padded stackable segment" id="centredButton">
+              <p><button class="ui big button" onclick="showElementHideOthers('learn', ['practise', 'about', 'home', 'feedback']); activate()">Learn about pronunciation</button></p>
+            </div>
+          </div>
+          <div class="eight wide column">
+            <div class="ui  raised padded stackable segment" id="centredButton">
+              <p><button class="ui big button" onclick="showElementHideOthers('practise', ['learn', 'about', 'home', 'feedback']); activate()">Practise pronunciation</button></p>
+            </div>
+          </div>
+        </div>
+      </div>
+        
+<!-- LEARN PAGE -->
+
+      <div id="learn" style="display:none">
+        <p><h4>Click the buttons to find out more</h4></p>
+        <p>
+          <div class = "ui raised padded stackable segment">
+            <div class="ui six column very relaxed stackable grid">
+              <div class="column">
+                <div id='centredButton' ><button class="ui button" onclick="showElementHideOthers('soundsOfEnglish', ['segmentalErrors', 'prosodicErrors', 'howItWorks', 'aboutFeedback', 'vocalTract'])">Sounds of English</button></div>
+              </div>
+              <div class="column">
+                <div id='centredButton' ><button class="ui button" onclick="showElementHideOthers('vocalTract', ['segmentalErrors', 'prosodicErrors', 'howItWorks', 'aboutFeedback', 'soundsOfEnglish'])">About the Vocal Tract</button></div>
+              </div>
+              <div class="column">
+                <div id='centredButton' ><button class="ui button" onclick="showElementHideOthers('segmentalErrors', ['soundsOfEnglish', 'prosodicErrors', 'howItWorks', 'aboutFeedback', 'vocalTract'])">Word Stress Patterns</button></div>
+              </div>
+              <div class="column">
+                <div id='centredButton' ><button class="ui button" onclick="showElementHideOthers('prosodicErrors', ['segmentalErrors', 'soundsOfEnglish', 'howItWorks', 'aboutFeedback', 'vocalTract'])">Intonation Patterns</button></div>
+              </div>
+              <div class="column">
+                <div id='centredButton' ><button class="ui button" onclick="showElementHideOthers('howItWorks', ['segmentalErrors', 'prosodicErrors', 'soundsOfEnglish', 'aboutFeedback', 'vocalTract'])">How to use the app</button></div>
+              </div>
+              <div class="column">
+                <div id='centredButton' ><button class="ui button" onclick="showElementHideOthers('aboutFeedback', ['segmentalErrors', 'prosodicErrors', 'soundsOfEnglish', 'howItWorks', 'vocalTract'])">Understanding Feedback</button></div>
+              </div>
+            </div>
+          </div>
+        </p> 
+        <!-- SOUNDS OF ENGLISH -->
+        <div id='soundsOfEnglish' class="ui raised padded stackable segment" style="display:none">
+          <h4>The Sounds of English </h4>
+          <p>The phonemic chart below contains the 44 sounds of (British) spoken English.</p>
+          <p>The chart is divided into vowels and consonants. The vowels are further divided into single vowels and diphthongs. Single vowels contain one sound. Diphthongs are vowels which are made up of two sounds.</p>
+          <p>The consonants are divided into voiced and unvoiced consonants. For example, P and B are produced in the same place in the mouth with the tongue in the same position. The only difference is that P is an unvoiced sound (no vibration of the vocal cords) while B is a voiced sound (vocal cords vibrate). </p>
+          <p><img class="ui centered huge image" src="images/phonemes.png"></p>
+        </div>
+
+        <!-- WORD STRES PATTERNS      -->
+        <div id='segmentalErrors' class="ui raised padded stackable segment" style="display:none">
+          <h4>Word Stress</h4>
+          <p>In English, each syllable in a word is not said with the same emphasis. Each word has one <strong>stressed</strong> syllable. The other syllables are unstressed or weak.</p>
+          <p>Take the word <strong>conversation</strong>, for example. Conversation has <strong>four</strong> syllables. The stress in on the <strong>third</strong> syllable.</p>
+          <p><img class="ui large centered image" src="images/conversation.png"></p>
+          <p>Stressed syllables are <strong>longer</strong>, <strong>louder</strong>, and they are pronounced more <strong>clearly</strong> than unstressed syllables.</p>
+          <p><img class="ui large centered image" src="images/conversation_amplitude.png"></p>  
+          <p>Listen to the audio below and see if you can recognise the stress.</p>
+          <p id='centredButton'><audio controls><source src="audio/conversation.wav" type="">Your browser does not support the audio element.</audio></p>
+        </div>
+
+        <!-- INTONATION PATTERNS  -->
+        <div id='prosodicErrors' class="ui raised padded stackable segment" style="display:none">
+          <h4>Intonation</h4>
+          <p>Try listening to someone talking without focusing to the words: the <strong>melody</strong> you can hear is <strong>intonation.</strong></p>
+          <p>Intonation is about how we say things, rather than what we say. Without intonation, it's impossible to understand the expressions and thoughts that go with words.</p>
+          <p>There are some general rules we can follow to learn some typical intonation patterns. Look at the examples below and listen to the audio to see if you can hear the patterns.</p>
+          <h3>Rising Intonation</h3>
+          <p>Firstly, when we ask a yes/no question, we tend to use rising intonation.</p>
+          <div class='ui two column stackable grid'>
+            <div class='column'>
+              <img class="ui large centered image" src="images/areyoubusy_pitch.png">
+            </div> 
+            <div class='middle aligned column'>    
+              <p><img class="ui big image" src="images/are_you_busy.png"></p>
+              <p><audio controls ><source src="audio/areyoubusy.wav" type="">Your browser does not support the audio element.</audio></p>
+            </div>
+          </div>
+            <h3>Falling Intonation</h3>
+            <p>Secondly, wh-questions are typically accompanied by falling intonation.</p>
+            <div class='ui two column stackable grid'>
+              <div class='column'>
+                <img class="ui large centered image" src="images/whereareyougoing_pitch.png">
+                </div> 
+                <div class='middle aligned column'>
+                <p><img class="ui big image" src="images/where_are_you_going.png"></p>
+                <p><audio controls ><source src="audio/whereareyougoing.wav" type="">Your browser does not support the audio element.</audio></p>
+                </div>
+              </div>
+            <h3>Combination Intonation</h3>
+            <p>Finally, when we list things, each item on the list has rising intonation except for the final item which has falling intonation.</p>
+            <div class='ui two column stackable grid'>
+              <div class='column'>
+                <img class="ui large centered image" src="images/imgoingtobuy_pitch.png">
+              </div> 
+              <div class="middle aligned column">
+                <p><img class="ui big image" src="images/im_going_to_buy.png"></p>
+                <p><audio controls ><source src="audio/im_going_to_buy.wav" type="">Your browser does not support the audio element.</audio></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- THE VOCAL TRACT -->
+          <div id='vocalTract' class="ui raised padded stackable segment" style="display:none">
+            <h4>The Vocal Tract</h4>
+            <div class='ui two column stackable grid'>
+              <div class='column'>
+                <p>
+                  <p>The image below shows the vocal tract with the places which are important in forming different sounds labelled.</p>
+                  <p>After you submit your recording for analysis, you will see this kind of image alongside an explanation of how to make each sound in the word.</p>
+                  <p>These diagrams show you where your tongue and teeth should be in order to make the sound.</p>
+                </p>
+              </div>
+              <div class='column'>
+                <p><img class="ui medium centered image" src="images/vocal-tract.gif"><h7 id="source">Source: https://pronuncian.com/the-vocal-tract</h7></p>
+              </div>
+            </div>
+          </div>
+          <!-- HOW TO USE THE APP -->
+          <div id='howItWorks' class="ui raised padded stackable segment" style="display:none">
+            <h4>Recording your voice and analysing your pronunciation!</h4>
+            <div class="ui two column stackable grid">
+              <div class ="column">
+              <p>
+                <p>When you go to the practise section, you can choose which area of pronunciation you would like to practise - indvidual sounds, word stress, or intonation.</p>
+                <p>After you have chosen an area, you can choose a word or phrase from the dropdown menu. </p>
+                <p>When you've chosen a word, use the buttons to record yourself saying the word.</p>
+                <p>You can listen to your recording, and record again if you're not happy with it.</p>
+                <p>Once you are satisfied with the recording, click to analyse your pronunciation.<p>
+              </p>
+              </div>
+              <div class ="column">
+                <p><img class="ui centered large image" src="images/howto.png"></p>
+              </div>
+            </div>
+          </div>
+                
+          <!-- UNDERSTANDING FEEDBACK -->
+          <div id='aboutFeedback' class="ui raised padded stackable segment" style="display:none">
+            <h4>Feedback</h4>
+            <p>Understanding the feedback on your pronunciation is essential for you to be able to improve. The different kinds of feedback given are explored below.</p>
+            <h3>Sounds</h3>
+            <p>If you have chosen <strong>Individual Sounds</strong>, you will be able to see all of the sounds contained in the word. You can click on each sound and see how to pronounce it and listen to other words containing that sound.</p>
+            <p>The system will either say that your pronunciation was excellent (see below), advise you on which sound to practise, or if your pronunciation was not clear it will ask that you go back and try again.</p>
+            <p><img class="ui huge centered image" src="images/sound_feedback.png"></p>
+            <p>You can then click on the individual sounds contained in the word to find out more about each sound. </p>
+            <p><img class="ui huge centered image" src="images/sound_pronounce.png"></p>
+            <h3>Word Stress</h3>
+            <p>If you have chosen <strong>Word Stress</strong>, you will be able to see the stress pattern of the word represented in a diagram.</p>
+            <p>The system will tell you on which syllable to placed the main stress. You can compare this to the model pronunciation.</p>
+            <p><img class="ui huge centered image" src="images/stress_feedback.png"></p>
+            <p><h3>Intonation Pattern</h3></p>
+            <p>If you have chosen <strong>Intonation</strong>, you will be able to see the intonation pattern of the phrase. It will be represented using rising or falling arrows.</p>
+            <p>The system will show you the pitch pattern of your pronunciation, and you can compare this to the model. You can identify if your pitch is rising or falling.</p>
+            <img class="ui huge centered image" src="images/intonation_feedback.png">
+          </div>
+        </div>
+
+
+<!-- PRACTISE PAGE -->
+
+        <div id="practise" style="display:none">
+          <p><h4>Choose an area to practise</h4></p>
+          <p>
+            <div class="ui three column stackable grid">
+              <div class="column">
+                <div id='centredButton' class="ui raised padded stackable segment" ><button class="ui large button" onclick="showElementsHideOthers(['voiceRecordArea', 'word-select'], [  'wordStress-select', 'intonation-select', 'step2', 'step3']); showText('Practise Individual Sounds', 'practise-title'); voiceRecord(); resetDropdowns() ">Individual Sounds</button></div>
+              </div>
+              <div class="column">
+                <div id='centredButton' class="ui raised padded stackable segment" ><button class="ui large button" onclick="showElementsHideOthers(['voiceRecordArea', 'wordStress-select'], [  'word-select', 'intonation-select', 'step2', 'step3']); showText('Practise Word Stress', 'practise-title'); voiceRecord(); resetDropdowns()">Word Stress</button></div>
+              </div>
+              <div class="column">
+                <div id='centredButton' class="ui raised padded stackable segment" ><button class="ui large button" onclick="showElementsHideOthers(['voiceRecordArea', 'intonation-select'], [  'wordStress-select', 'word-select', 'step2', 'step3']); showText('Practise Intonation', 'practise-title'); voiceRecord(); resetDropdowns()">Intonation</button></div>
+              </div>
+            </div>
+          </p>
+          <div class="ui raised padded text container segment" id="voiceRecordArea" style="display:none">
+            <h4 id="practise-title"></h4>
+            <p>Choose a word / phrase from the dropdown menu.</p>
+            <p id='intonation-instructions' style="display:none">You can find out more about intonation patterns by going to the <strong>Learn</strong> page.</p>
+            <p>
+            <!-- DROPDOWN MENU FOR INDIVIDUAL SOUNDS -->
+              <select id="word-select" class="ui selection dropdown" onchange="getSelectValue('word-select', 'wordButton');" style="display:none">
+                <option value="0" selected="selected" disabled="true">Select</option>
+                <option value="sit">sit</option>
+                <option value="seat">seat</option>
+                <option value="sheet">sheet</option>
+              </select>
+            <!-- DROPDOWN MENU FOR WORD STRESS -->
+              <select id="wordStress-select" class="ui selection dropdown" onchange="getSelectValue('wordStress-select');" style="display:none">
+                <option value="0" selected="selected" disabled="true">select word</option>
+                <option value="garden_1">garden</option>
+                <option value="attack_2">attack</option>
+                <option value="police_2">police</option>
+                <option value="happen_1">happen</option>
+              </select>
+            <!-- DROPDOWN MENU FOR INTONATION -->
+              <select id="intonation-select" class="ui selection dropdown" onchange="getSelectValue('intonation-select');" style="display:none">
+                <option value="0" selected="selected" disabled="true">select phrase</option>
+                <option value="is_it_raining">Is it raining?</option>
+                <option value="where_do_you_live">Where do you live?</option>
+                <option value="she_speaks">She speaks English, Arabic, French and Spanish.</option>
+              </select>
+            </p>
+
+            <!-- VOICE RECORD AREA -->
+            <div id="step2" style="display:none">
+              <p>Use the buttons below to record yourself saying the chosen word / phrase.</p> 
+              <p>
+                <icons>
+                  <button  id='startButton' class="ui labeled icon big button" ><i class="microphone icon"></i>Start recording</button>
+                  <button  id='stopButton' class="ui labeled icon disabled big button"><i class="stop icon"></i>Stop recording</button>
+                </icons>
+              </p>
+            </div>  
+
+            <div id="step3" style="display:none">
+              <p>
+              <p id="timeout"></p>
+              <p>Listen to your recording.</p>
+              <p><audio controls id="userAudio"><source src="" type="">Your browser does not support the audio element.</audio></p>
+              <p>If you are happy with the recording, click to analyse your pronunciation.</p>
+              <div id='centredButton'>
+                <p><button  id="upload" class="ui huge button">Analyse Pronunciation</button></p> 
+              </div>
+              </p>
+            </div>
+          </div>  
+        </div>
+        <p><div class='ui huge text loader' style="display:none" id="loader"><strong><p id="loaderText">Analysing your pronunciation</p><p id="loaderText1">Please Wait</p></strong></div></p>
+
+<!-- ABOUT PAGE -->
+        <div id='about' style="display:none">
+          <div class="ui grid padded">
+            <div class="sixteen wide column">
+              <div class="ui raised padded stackable segment">
+                <h4>About</h4>
+                <p>Artificial Intelligibility is an MSc Project which aims to explore  efficient  ways  to  detect  errors  in  pronunciation  and provide  feedback  using  speech  technology.</p>
+                <p>The main objectives are to explore the kinds of visual feedback users find effective, and to investigate how speech technologies can be employed in order to accurately detect both segmental and prosodic errors in pronunciation.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+<!-- RESULTS PAGE -->
+
+        <div id="feedback" style="display:none">
+          <p>
+          <h4>Analysis complete!</h4>
+          </p>
+          <div id="comparisonArea" class="ui raised padded stackable segment" style="display:none">
+          <h4>Results</h4>
+            <div class='ui two column stackable grid'>
+              <div class='column'> 
+                <p><h3>Your pronunciation</h3></p>
+                <p id="centredButton"><audio controls id="userAudioFeedback"><source src="" type="">Your browser does not support the audio element.</audio></p>
+                <p ><h4 id="response"></h4></p>
+                <p id="analysis"></p>
+              </div>
+              <div class='column'>
+                <p><h3>Model pronunciation</h3></p>
+                <p id="centredButton"><audio controls id="model"><source src="" type="">Your browser does not support the audio element.</audio></p>
+                <h4 id="stressText"></h4>
+                <p id="model-image"></p>
+              </div>
+            </div>  
+          </div>
+
+          <!-- SOUND BUTTON AREA -->
+          <div id='soundButtons' class="ui raised padded stackable segment" style="display:none">
+            <div>
+              <h4>Click the buttons to find out more about each sound</h4>
+              <div class="ui three column stackable grid">
+                <div id="b0" class="column"></div>
+                <div id="b1" class="column"></div>
+                <div id="b2" class="column"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+          <!-- SOUNDS AREA -->
+        <div id="moreSound" style="display:none">
+          <div class="ui three column internally divided raised padded stackable grid segment">
+            <div class="row">
+              <div class="column" >  
+                <h4 id='listenTitle'></h4>
+                <p id="sound-audio"></p>
+              </div>
+              <div class="column" >  
+                <h4 id='soundTitle'></h4>
+                <p id='image-area'></p>
+                <p id="source">Source: https://pronuncian.com/sounds</p>
+              </div>
+              <div class="column" >  
+                <h4 id="howToTitle"></h4>
+                <p id='text-area'></p>
+              </div>
+            </div>
+            <div id='centredButton' class="row"><h4 id='otherWordsTitle'></h4></div>
+              <div class="row">
+                <div class="column"><h4 id="label-area0"></h4><p id="audio-area0"></p></div>
+                <div class="column"><h4 id="label-area1"></h4><p id="audio-area1"></p></div>
+                <div class="column"><h4 id="label-area2"></h4><p id="audio-area2"></p></div>
+              </div>
+            </div>
+          </div> 
+      
+          <div id="goback" style="display:none" > 
+            <p>
+            <p id="centredButton"><button class="ui huge button" id="centredButton" onclick="showElementHideOthers1('practise', ['learn', 'about', 'home', 'feedback', 'comparisonArea', 'voiceRecordArea', 'moreSound', 'soundsOfEnglish', 'segmentalErrors', 'prosodicErrors', 'howItWorks', 'vocalTract', 'aboutFeedback', 'goback', 'soundButtons']); clearButtons()">Back</button></p>
+            </p>
+          </div>   
+        </div>
+
+        <!-- FOOTER -->
+        <div class="footer">
+          <p>
+          <footer id='footer'><p id='footer-text'><strong>&copy Hannah Bouteba</strong></br><em> The University of Sheffield</em></p></footer>
+          </p>
+        </div>
+      </div>
+  </body> 
+</html>
